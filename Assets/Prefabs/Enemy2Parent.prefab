@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 3205411084323836336}
   m_Layer: 0
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 2.75}
+  m_Size: {x: 1.5, y: 2.6}
   m_EdgeRadius: 0
 --- !u!114 &3205411084323836336
 MonoBehaviour:
