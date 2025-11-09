@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class NextLevelButton : MonoBehaviour
 {
+    public string NextLevel = "Level0";
+
     public void OnClick()
     {
-        SceneManager.LoadScene("Level01");
-        GameManager.StartGame();
+        SceneManager.LoadScene(NextLevel);
     }
 }

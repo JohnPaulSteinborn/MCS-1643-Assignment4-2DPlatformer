@@ -9,10 +9,12 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI ScoreboardTMP;
     public GameObject[] LifeToken;
     public GameObject GameOverScreen;
+    public GameObject LevelCompleteScreen;
 
     private void Start()
     {
         GameOverScreen.SetActive(false);
+        LevelCompleteScreen.SetActive(false);
     }
     private void Update()
     {
