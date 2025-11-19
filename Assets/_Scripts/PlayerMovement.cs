@@ -18,9 +18,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool idle, walking, jumping;
 
-    public AudioSource audioSrc;
-    public AudioSource audioSrc2;
-    public AudioSource audioSrc3;
+    private AudioSource audioSrc;
+    public AudioClip jumpSound;
+    public AudioClip damageSound;
+    public AudioClip attackSound;
 
     // Improvements to consider:
     // - Double jump
@@ -34,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         audioSrc = GetComponentInChildren<AudioSource>();
-        audioSrc2 = GetComponentInChildren<AudioSource>();
-        audioSrc3 = GetComponentInChildren<AudioSource>();
 
 
         idle = false;
@@ -102,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
             if (!jumping) {
                 animator.Play("Jump");
                 jumping = true;
-                audioSrc.Play();
+                audioSrc.PlayOneShot(jumpSound);
             }
 
             idle = false;
@@ -128,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
             forceVector.y += 1;
 
             rb.AddForce(forceVector * enemyBumpForce, ForceMode2D.Impulse);
-            audioSrc3.Play();
+            audioSrc.PlayOneShot(damageSound);
         }
     }
 
@@ -137,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.transform.CompareTag("Enemy"))
         {
             GameManager.Score += 100;
-            audioSrc2.Play();
+            audioSrc.PlayOneShot(attackSound);
             Debug.Log($"Killed enemy! Score is now {GameManager.Score}");
 
             Destroy(collision.gameObject);

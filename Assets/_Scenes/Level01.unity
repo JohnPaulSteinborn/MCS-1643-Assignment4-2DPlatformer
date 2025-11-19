@@ -7832,6 +7832,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3568352498168135858, guid: db1acc8ee8c9f3347867bcb29a2ffe37, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3329543968ddbc5429cdf8cd0505e048, type: 3}
+    - target: {fileID: 3568352498168135858, guid: db1acc8ee8c9f3347867bcb29a2ffe37, type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42d929c01c2f7bc40a4ab47ec88b69d4, type: 3}
+    - target: {fileID: 3568352498168135858, guid: db1acc8ee8c9f3347867bcb29a2ffe37, type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d1d8aee1c7f38b447b271cd3d62572b2, type: 3}
     - target: {fileID: 5707896917488790191, guid: db1acc8ee8c9f3347867bcb29a2ffe37, type: 3}
       propertyPath: m_Name
       value: SquarePlayer
